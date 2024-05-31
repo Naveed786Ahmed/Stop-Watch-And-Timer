@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="./pages/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/stopwatch-icon-12.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- StopWatch -->
+    <div class="container" id="containers">
+        <div class="header">
+            <div class="same  active" id="stopWatch">
+                <i class="fa-solid fa-stopwatch"></i>
+                STOPWATCH
+            </div>
+            <div class="same" id="timer" onclick="display1()">
+                <i class="fa-regular fa-hourglass"></i>
+                TIMER
+            </div>
+        </div>
+
+        <div class="main-body" id="display">
+            00:00:00
+        </div>
+
+        <div class="btns">
+            <div class="similar" id="start">START</div>
+            <div class="similar" id="stop">STOP</div>
+            <div class="similar" id="reset">RESET</div>
+        </div>
+
+    </div>
+
+    <!-- Timer -->
+    <div class="timer-container" id="timer-containers" style="display: none;">
+        <div class="headers">
+            <div class="same" id="stopWatch" onclick="display2()">
+                <i class="fa-solid fa-stopwatch"></i>
+                STOPWATCH
+            </div>
+            <div class="same active" id="timer">
+                <i class="fa-regular fa-hourglass"></i>
+                TIMER
+            </div>
+        </div>
+
+        <div class="setTime">
+            <div class="time-inputs">
+                <input type="number" id="minutes" placeholder="Minutes" min="0">
+                <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+            </div>
+            <button id="set-timer">Set Timer</button>
+        </div>
+
+        <div class="timer-main-body" id="timer-display">
+            00:00
+        </div>
+
+        <div class="timer-btns">
+            <div class="similar" id="start-timer" disabled>START</div>
+            <div class="similar" id="stop-timer" disabled>STOP</div>
+            <div class="similar" id="reset-timer" disabled>RESET</div>
+        </div>
+    </div>
+    <script src="./pages/app.js">
+
+    </script>
+</body>
+
+</html>
